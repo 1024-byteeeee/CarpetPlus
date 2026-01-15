@@ -1,6 +1,5 @@
 package com.ohhapple.carpetplus.mixin;
 
-import com.ohhapple.carpetplus.CarpetPlus;
 import com.ohhapple.carpetplus.settings.CarpetPlusSettings;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SpongeBlock;

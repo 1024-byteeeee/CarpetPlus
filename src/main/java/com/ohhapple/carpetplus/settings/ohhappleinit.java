@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
 import static com.ohhapple.carpetplus.settings.CarpetPlusSettings.playerSpecificChunks;
 
 public class ohhappleinit implements CarpetExtension {

@@ -2,7 +2,6 @@ package com.ohhapple.carpetplus.mycommand;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.ohhapple.carpetplus.settings.CarpetPlusSettings;
 import com.ohhapple.carpetplus.settings.ohhappleinit;
