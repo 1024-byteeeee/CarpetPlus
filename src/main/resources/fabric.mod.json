@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "carpetplus",
+  "version": "${version}",
+  "name": "CarpetPlus",
+  "description": "随便写的一些小功能",
+  "authors": ["ohhapple"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/carpetplus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.ohhapple.carpetplus.client.CarpetPlusDataGenerator"
+    ],
+    "client": [
+      "com.ohhapple.carpetplus.client.CarpetPlusClient"
+    ],
+    "main": [
+      "com.ohhapple.carpetplus.CarpetPlus"
+    ]
+  },
+  "mixins": [
+    "carpetplus.mixins.json",
+    {
+      "config": "carpetplus.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "carpet": ">=1.4.169"
+  },
+  "accessWidener": "ohhapple.accesswidener"
+}

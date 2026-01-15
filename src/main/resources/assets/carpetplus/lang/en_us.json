@@ -1,0 +1,28 @@
+{
+
+  "carpet.category.ohhapple": "ohhapple",
+
+
+"carpet.rule.SuperWindCharge.name": "Wind Bullet Rasengan Shuriken",
+  "carpet.rule.SuperWindCharge.desc": "Wind Bullet Rasengan Shuriken",
+  "carpet.rule.VillageAlwaysBreed.name": "The villagers have been breeding",
+  "carpet.rule.VillageAlwaysBreed.desc": "Village has been breeding",
+  "carpet.rule.NuclearTNT.name": "nuclear bomb",
+  "carpet.rule.NuclearTNT.desc": "nuclear bomb",
+  "carpet.rule.TNTPower.name": "Nuclear bomb explosion intensity (nuclear bomb required)",
+  "carpet.rule.TNTPower.desc": "nuclear bomb explosion intensity (set too big to be careful of collapse)",
+  "carpet.rule.SuperSponge.name": "super sponge",
+  "carpet.rule.SuperSponge.desc": "SuperSponge Switch (radius required)",
+  "carpet.rule.SuperSpongeRadius.name": "Super Sponge Effective Radius (Super Sponge Required)",
+  "carpet.rule.SuperSpongeRadius.desc": "super sponge radius",
+  "carpet.rule.TNTBreakFluid.name": "TNT destructible fluid",
+  "carpet.rule.TNTBreakFluid.desc": "TNT destructible fluid",
+
+
+  "carpet.rule.playerSpecificChunks.name": "启用玩家独立区块加载范围",
+  "carpet.rule.playerSpecificChunks.desc": "启用玩家独立区块加载范围",
+  "carpet.rule.playerChunkLoadRanges.name": "玩家区块加载范围设置",
+  "carpet.rule.playerChunkLoadRanges.desc": "请使用/playerchunk逐个设置",
+  "carpet.rule.defaultPlayerViewDistance.name": "默认玩家区块加载范围",
+  "carpet.rule.defaultPlayerViewDistance.desc": "默认玩家区块加载范围"
+}

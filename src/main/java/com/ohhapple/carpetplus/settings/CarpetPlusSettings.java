@@ -1,0 +1,122 @@
+package com.ohhapple.carpetplus.settings;
+
+import carpet.api.settings.Rule;
+import carpet.api.settings.CarpetRule;
+import carpet.api.settings.Validator;
+import carpet.api.settings.Validators;
+import net.minecraft.commands.CommandSourceStack;
+
+import static carpet.api.settings.RuleCategory.*;
+
+/**
+ * Here is your example Settings class you can plug to use carpetmod /carpet settings command
+ */
+public class CarpetPlusSettings
+{
+    public enum ComparatorOptions {
+        VANILLA,
+        BEHIND,
+        LENIENT,
+        EXTENDED;
+    }
+
+    public static final String OHHAPPLE = "ohhapple";
+
+    public static class validatorScaffoldingDistance extends Validator<Integer> {
+        @Override
+        public Integer validate(CommandSourceStack source, CarpetRule<Integer> currentRule, Integer newValue, String string) {
+            return newValue >= 0 && newValue <= 7 ? newValue : null;
+        }
+
+        @Override
+        public String description() { return "You must choose a value from 0 to 7";}
+    }
+
+    public static class ValidateSpiderJokeyDropChance extends Validator<Integer>
+    {
+        @Override
+        public Integer validate(CommandSourceStack source, CarpetRule<Integer> currentRule, Integer newValue, String string)
+        {
+            return newValue >= 0 && newValue <= 100 ? newValue : null;
+        }
+
+        @Override
+        public String description() { return "You must choose a value from 0 to 100";}
+    }
+
+    // 验证器类
+    public static class ViewDistanceValidator extends Validator<Integer> {
+        @Override
+        public Integer validate(CommandSourceStack source, CarpetRule<Integer> currentRule, Integer newValue, String string) {
+            if (newValue < 2 || newValue > 32) {
+                return 10; // 默认值
+            }
+            return newValue;
+        }
+
+        @Override
+        public String description() {
+            return "必须在2到32之间";
+        }
+    }
+
+
+    //--------------------------------------------------------------------------------------
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean SuperWindCharge = false;
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean VillageAlwaysBreed = false;
+
+
+    //--------------------------------------------------------------------------------------
+//    @Rule(
+//            categories = {OHHAPPLE, FEATURE}
+//    )
+//    public static boolean NuclearTNT = false;
+//    @Rule(
+//            options = {"0","4", "10", "20","100"},
+//            strict = false,
+//            categories = {OHHAPPLE, FEATURE},
+//            validators = Validators.NonNegativeNumber.class
+//    )
+//    public static int TNTPower = 4;
+    //--------------------------------------------------------------------------------------
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean SuperSponge = false;
+    @Rule(
+            options = {"0","6", "10", "20","100"},
+            strict = false,
+            categories = {OHHAPPLE, FEATURE},
+            validators = Validators.NonNegativeNumber.class
+    )
+    public static int SuperSpongeRadius = 6;
+    //--------------------------------------------------------------------------------------
+//    @Rule(
+//            categories = {OHHAPPLE, FEATURE}
+//    )
+//    public static boolean TNTBreakFluid = false;
+    //--------------------------------------------------------------------------------------
+    //启用玩家独立区块加载范围
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean playerSpecificChunks = false;
+    //玩家区块加载范围设置
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static String playerChunkLoadRanges = "";
+    //默认玩家区块加载范围
+    @Rule(
+            categories = {OHHAPPLE, FEATURE},
+            validators = ViewDistanceValidator.class
+    )
+    public static int defaultPlayerViewDistance = 10;
+
+}

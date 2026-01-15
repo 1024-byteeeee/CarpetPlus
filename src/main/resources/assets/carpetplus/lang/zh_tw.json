@@ -1,0 +1,27 @@
+{
+  "carpet.category.ohhapple": "ohhapple",
+
+
+
+  "carpet.rule.SuperWindCharge.name": "风弹螺旋丸手里剑",
+  "carpet.rule.SuperWindCharge.desc": "风弹螺旋丸手里剑",
+  "carpet.rule.VillageAlwaysBreed.name": "村民一直繁殖",
+  "carpet.rule.VillageAlwaysBreed.desc": "村民一直繁殖",
+  "carpet.rule.NuclearTNT.name": "核弹",
+  "carpet.rule.NuclearTNT.desc": "核弹",
+  "carpet.rule.TNTPower.name": "核弹爆炸强度(需开启核弹)",
+  "carpet.rule.TNTPower.desc": "核弹爆炸强度(设置太大当心崩溃)",
+  "carpet.rule.SuperSponge.name": "超级海绵",
+  "carpet.rule.SuperSponge.desc": "超级海绵开关(需设置半径)",
+  "carpet.rule.SuperSpongeRadius.name": "超级海绵生效半径(需开启超级海绵)",
+  "carpet.rule.SuperSpongeRadius.desc": "超级海绵生效半径",
+  "carpet.rule.TNTBreakFluid.name": "TNT可破坏流体",
+  "carpet.rule.TNTBreakFluid.desc": "TNT可破坏流体",
+
+  "carpet.rule.playerSpecificChunks.name": "启用玩家独立区块加载范围",
+  "carpet.rule.playerSpecificChunks.desc": "启用玩家独立区块加载范围",
+  "carpet.rule.playerChunkLoadRanges.name": "玩家区块加载范围设置",
+  "carpet.rule.playerChunkLoadRanges.desc": "请使用/playerchunk逐个设置",
+  "carpet.rule.defaultPlayerViewDistance.name": "默认玩家区块加载范围",
+  "carpet.rule.defaultPlayerViewDistance.desc": "默认玩家区块加载范围"
+}
