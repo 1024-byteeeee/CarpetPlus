@@ -6,25 +6,37 @@
 
 /carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需开启超级海绵)
 
-/carpet playerSpecificChunks [boolean default=false] 启用玩家独立区块加载范围
+/carpet playerSpecificChunks [boolean default=false] 启用玩家独立视距
 
-/carpet playerChunkLoadRanges [String default=""] 玩家区块加载范围设置（请使用/playerchunk逐个设置）
+/carpet playerChunkLoadRanges [String default=""] 玩家视距设置（请使用/playerchunk逐个设置）
 
-/carpet defaultPlayerViewDistance [int default=10] 默认玩家区块加载范围（不用管）
+/carpet defaultPlayerViewDistance [int default=10] 默认玩家视距范围（不用管）
 
-关于玩家独立区块加载范围的指令：
+关于玩家独立视距范围的指令：
+1. 启用功能
+   /carpet playerSpecificChunks true
 
-启用功能 /carpet playerSpecificChunks true
-设置单个玩家 /playerchunk set 玩家A 10
+设置单个玩家
+/playerchunk set 玩家A 10
 
-设置多个玩家 /playerchunk set @a 10 # 所有玩家 /playerchunk set @r 8 # 随机玩家 /playerchunk set @p 12 # 最近的玩家
+设置多个玩家
+/playerchunk set @a 10          # 所有玩家
+/playerchunk set @r 8           # 随机玩家
+/playerchunk set @p 12          # 最近的玩家
 
-查看设置 /playerchunk get 玩家A /playerchunk get @s # 自己
+查看设置
+/playerchunk get 玩家A
+/playerchunk get @s             # 自己
 
-重置设置 /playerchunk reset 玩家A /playerchunk reset @a # 重置所有玩家
+重置设置
+/playerchunk reset 玩家A
+/playerchunk reset @a           # 重置所有玩家
 
-列出所有设置 /playerchunk list
+列出所有设置
+/playerchunk list
 
-查看状态 /playerchunk status
+查看状态
+/playerchunk status
 
-统计信息 /chunkstats
+统计信息
+/chunkstats
