@@ -1,13 +1,8 @@
 package com.ohhapple.carpetplus;
 
-import com.ohhapple.carpetplus.mycommand.ChunkStatsCommand;
-import com.ohhapple.carpetplus.mycommand.PlayerChunkCommand;
 import com.ohhapple.carpetplus.settings.ohhappleinit;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
-import java.io.IOException;
-import java.io.InputStream;
 
 
 public class CarpetPlus implements ModInitializer
