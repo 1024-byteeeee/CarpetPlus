@@ -4,6 +4,8 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import com.mojang.brigadier.CommandDispatcher;
 import com.ohhapple.carpetplus.CarpetPlus;
+import com.ohhapple.carpetplus.mycommand.ChunkStatsCommand;
+import com.ohhapple.carpetplus.mycommand.PlayerChunkCommand;
 import com.ohhapple.carpetplus.utils.CarpetPlusTranslations;
 import com.ohhapple.carpetplus.utils.PlayerChunkLoader;
 import net.minecraft.commands.CommandBuildContext;
@@ -66,6 +68,8 @@ public class ohhappleinit implements CarpetExtension {
     {
         // 放额外的自定义命令 注册自己的命令
 //        PingCommand.register(dispatcher);
+        PlayerChunkCommand.register(dispatcher);
+        ChunkStatsCommand.register(dispatcher);
     }
     @Override
     public void onPlayerLoggedIn(ServerPlayer player) {
