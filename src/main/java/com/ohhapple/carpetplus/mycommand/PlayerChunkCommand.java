@@ -105,8 +105,10 @@ public class PlayerChunkCommand {
             return 1;
         } else {
             ctx.getSource().sendFailure(Component.literal(
+//                    String.format("设置失败，距离必须在 2 到 %d 之间",
+//                            loader.getPlayerViewDistance(player))
                     String.format("设置失败，距离必须在 2 到 %d 之间",
-                            loader.getPlayerViewDistance(player))
+                            ctx.getSource().getServer().getPlayerList().getViewDistance())
             ));
             return 0;
         }
@@ -255,6 +257,11 @@ public class PlayerChunkCommand {
                 ctx.getSource().sendSuccess(() -> Component.literal("当前规则: " + ruleValue), false);
             }
         }
+
+        int serverMaxViewDistance = ctx.getSource().getServer().getPlayerList().getViewDistance();
+        ctx.getSource().sendSuccess(() -> Component.literal(
+                String.format("服务器最大视距: %d", serverMaxViewDistance)
+        ), false);
 
         ctx.getSource().sendSuccess(() -> Component.literal(
                 String.format("默认范围: %d", CarpetPlusSettings.defaultPlayerViewDistance)
