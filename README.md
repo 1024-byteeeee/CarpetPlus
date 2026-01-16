@@ -6,13 +6,13 @@
 
 /carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需开启超级海绵)
 
-/carpet playerSpecificChunks [boolean default=false] 启用玩家独立区块加载范围
+/carpet playerSpecificChunks [boolean default=false] 启用玩家独立视距
 
-/carpet playerChunkLoadRanges [String default=""] 玩家区块加载范围设置（请使用/playerchunk逐个设置）
+/carpet playerChunkLoadRanges [String default=""] 玩家视距设置（请使用/playerchunk逐个设置）
 
-/carpet defaultPlayerViewDistance [int default=10] 默认玩家区块加载范围（不用管）
+/carpet defaultPlayerViewDistance [int default=10] 默认玩家视距范围（不用管）
 
-关于玩家独立区块加载范围的指令：
+关于玩家独立视距范围的指令：
 1. 启用功能
 /carpet playerSpecificChunks true
 
