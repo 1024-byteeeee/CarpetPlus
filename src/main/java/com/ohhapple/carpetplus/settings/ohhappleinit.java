@@ -40,8 +40,8 @@ public class ohhappleinit implements CarpetExtension {
     public void onGameStarted() {
         // 让我们用 /carpet 来处理我们为数不多的简单设置
         LOGGER.info("CarpetPlus loaded! Made By ohhapple");
-        LOGGER.info("Open Source: https://github.com/ohhapple");
-//        LOGGER.info("Issues: ");
+        LOGGER.info("Open Source: https://github.com/ohhapple/CarpetPlus");
+        LOGGER.info("Issues: https://github.com/ohhapple/CarpetPlus/issues");
 //        LOGGER.info("Wiki: ");
         CarpetServer.settingsManager.parseSettingsClass(CarpetPlusSettings.class);
     }
