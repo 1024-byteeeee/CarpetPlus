@@ -10,9 +10,7 @@
   "icon": "assets/carpetplus/icon.png",
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "com.ohhapple.carpetplus.client.CarpetPlusDataGenerator"
-    ],
+
     "client": [
       "com.ohhapple.carpetplus.client.CarpetPlusClient"
     ],
@@ -29,7 +27,6 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric-api": "*",
     "minecraft": "${minecraft_version}",
     "carpet": ">=1.4.169"
   },

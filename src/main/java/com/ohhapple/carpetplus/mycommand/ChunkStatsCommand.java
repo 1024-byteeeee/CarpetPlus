@@ -21,11 +21,11 @@ public class ChunkStatsCommand {
     private static int showChunkStats(CommandContext<CommandSourceStack> ctx) {
         var loader = ohhappleinit.getLoader();
         if (loader == null) {
-            ctx.getSource().sendFailure(Component.literal("玩家区块加载器未初始化"));
+            ctx.getSource().sendFailure(Component.literal("玩家视距加载器未初始化"));
             return 0;
         }
 
-        ctx.getSource().sendSuccess(() -> Component.literal("=== 区块加载统计 ==="), false);
+        ctx.getSource().sendSuccess(() -> Component.literal("=== 视距加载统计 ==="), false);
 
         // 获取服务器最大视距
         int serverMaxViewDistance = ctx.getSource().getServer().getPlayerList().getViewDistance();
@@ -42,7 +42,7 @@ public class ChunkStatsCommand {
         // 显示功能状态
         boolean enabled = CarpetPlusSettings.playerSpecificChunks;
         ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("玩家独立区块加载: %s", enabled ? "启用" : "禁用")
+                String.format("玩家独立视距: %s", enabled ? "启用" : "禁用")
         ), false);
 
         // 显示每个玩家的区块加载信息
@@ -66,7 +66,7 @@ public class ChunkStatsCommand {
             // 计算区块加载数量（近似值）
             int chunkCount = (playerDistance * 2 + 1) * (playerDistance * 2 + 1);
             ctx.getSource().sendSuccess(() -> Component.literal(
-                    String.format("加载区块数: ~%d", chunkCount)
+                    String.format("加载视距区块数: ~%d", chunkCount)
             ), false);
         }
 

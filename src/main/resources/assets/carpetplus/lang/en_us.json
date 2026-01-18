@@ -19,10 +19,13 @@
   "carpet.rule.TNTBreakFluid.desc": "TNT destructible fluid",
 
 
-  "carpet.rule.playerSpecificChunks.name": "启用玩家独立区块加载范围",
-  "carpet.rule.playerSpecificChunks.desc": "启用玩家独立区块加载范围",
-  "carpet.rule.playerChunkLoadRanges.name": "玩家区块加载范围设置",
+  "carpet.rule.playerSpecificChunks.name": "启用玩家独立视距范围",
+  "carpet.rule.playerSpecificChunks.desc": "启用玩家独立视距范围",
+  "carpet.rule.playerChunkLoadRanges.name": "玩家视距范围设置",
   "carpet.rule.playerChunkLoadRanges.desc": "请使用/playerchunk逐个设置",
-  "carpet.rule.defaultPlayerViewDistance.name": "默认玩家区块加载范围",
-  "carpet.rule.defaultPlayerViewDistance.desc": "默认玩家区块加载范围"
+  "carpet.rule.defaultPlayerViewDistance.name": "默认玩家视距范围",
+  "carpet.rule.defaultPlayerViewDistance.desc": "开启玩家独立视距范围后的默认范围",
+
+  "carpet.rule.concreteBurnedIntoglass.name": "混凝土粉末烧玻璃",
+  "carpet.rule.concreteBurnedIntoglass.desc": "混凝土粉末烧玻璃"
 }

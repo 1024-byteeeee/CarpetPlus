@@ -1,42 +1,31 @@
+# CarpetPlus
+[![License](https://img.shields.io/github/license/ohhapple/CarpetPlus.svg?label=License&color=blue)](https://choosealicense.com/licenses/lgpl-3.0/)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/ohhapple/CarpetPlus/total?color=161616&label=Github%20downloads)](https://github.com/ohhapple/CarpetPlus/releases)
+# 相关规则指令
+~~~
 /carpet SuperWindCharge [boolean default=false] 风弹螺旋丸手里剑
-
 /carpetVillageAlwaysBreed [boolean default=false] 村民一直繁殖（包括小村民）
-
 /carpet SuperSponge [boolean default=false] 超级海绵
-
 /carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需开启超级海绵)
-
 /carpet playerSpecificChunks [boolean default=false] 启用玩家独立视距
-
-/carpet playerChunkLoadRanges [String default=""] 玩家视距设置（请使用/playerchunk逐个设置）
-
-/carpet defaultPlayerViewDistance [int default=10] 默认玩家视距范围（不用管）
-
+/carpet concreteBurnedIntoglass [boolean default=false] 16色混凝土粉末烧成16色玻璃
 关于玩家独立视距范围的指令：
-1. 启用功能
-   /carpet playerSpecificChunks true
-
-设置单个玩家
-/playerchunk set 玩家A 10
-
-设置多个玩家
-/playerchunk set @a 10          # 所有玩家
-/playerchunk set @r 8           # 随机玩家
-/playerchunk set @p 12          # 最近的玩家
-
-查看设置
-/playerchunk get 玩家A
-/playerchunk get @s             # 自己
-
-重置设置
-/playerchunk reset 玩家A
-/playerchunk reset @a           # 重置所有玩家
-
-列出所有设置
-/playerchunk list
-
-查看状态
-/playerchunk status
-
-统计信息
-/chunkstats
+    启用功能
+    /carpet playerSpecificChunks true
+    开启功能后玩家默认视距被设置为10（不会超过服务器视距）
+    设置单个玩家
+    /playerchunk set 玩家A 10
+    设置多个玩家
+    /playerchunk set @a 10          # 所有玩家
+    /playerchunk set @r 8           # 随机玩家
+    /playerchunk set @p 12          # 最近的玩家
+    查看设置
+    /playerchunk get 玩家A
+    /playerchunk get @s             # 自己
+    列出所有设置
+    /playerchunk list
+    查看状态
+    /playerchunk status
+    统计信息
+    /chunkstats
+~~~

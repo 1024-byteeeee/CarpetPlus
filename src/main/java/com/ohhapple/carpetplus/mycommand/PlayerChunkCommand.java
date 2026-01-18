@@ -52,21 +52,21 @@ public class PlayerChunkCommand {
                 )
 
                 // 重置玩家视距
-                .then(Commands.literal("reset")
-                        .executes(ctx -> resetCurrentPlayerViewDistance(ctx))
-                        .then(Commands.argument("player", EntityArgument.player())
-                                .executes(ctx -> resetPlayerViewDistance(
-                                        ctx,
-                                        EntityArgument.getPlayer(ctx, "player")
-                                ))
-                        )
-                        .then(Commands.argument("players", EntityArgument.players())
-                                .executes(ctx -> resetMultiplePlayersViewDistance(
-                                        ctx,
-                                        EntityArgument.getPlayers(ctx, "players")
-                                ))
-                        )
-                )
+//                .then(Commands.literal("reset")
+//                        .executes(ctx -> resetCurrentPlayerViewDistance(ctx))
+//                        .then(Commands.argument("player", EntityArgument.player())
+//                                .executes(ctx -> resetPlayerViewDistance(
+//                                        ctx,
+//                                        EntityArgument.getPlayer(ctx, "player")
+//                                ))
+//                        )
+//                        .then(Commands.argument("players", EntityArgument.players())
+//                                .executes(ctx -> resetMultiplePlayersViewDistance(
+//                                        ctx,
+//                                        EntityArgument.getPlayers(ctx, "players")
+//                                ))
+//                        )
+//                )
 
                 // 列出所有玩家设置
                 .then(Commands.literal("list")
@@ -92,14 +92,14 @@ public class PlayerChunkCommand {
     ) {
         var loader = ohhappleinit.getLoader();
         if (loader == null) {
-            ctx.getSource().sendFailure(Component.literal("玩家区块加载器未初始化"));
+            ctx.getSource().sendFailure(Component.literal("玩家视距加载器未初始化"));
             return 0;
         }
 
         boolean success = loader.setPlayerViewDistance(player, distance);
         if (success) {
             ctx.getSource().sendSuccess(() -> Component.literal(
-                    String.format("设置玩家 %s 的区块加载范围为 %d",
+                    String.format("设置玩家 %s 的视距范围为 %d",
                             player.getName().getString(), distance)
             ), true);
             return 1;
@@ -128,7 +128,7 @@ public class PlayerChunkCommand {
         int count = (int) players.stream().filter(player -> loader.setPlayerViewDistance(player, distance)).count();
 
         ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("成功设置 %d/%d 个玩家的区块加载范围为 %d",
+                String.format("成功设置 %d/%d 个玩家的视距范围为 %d",
                         count, players.size(), distance)
         ), true);
 
@@ -148,7 +148,7 @@ public class PlayerChunkCommand {
         String setting = loader.getPlayerSettings(player);
 
         ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("玩家 %s 的区块加载范围: %d (%s)",
+                String.format("玩家 %s 的视距范围: %d (%s)",
                         player.getName().getString(), distance, setting)
         ), false);
 
@@ -164,33 +164,33 @@ public class PlayerChunkCommand {
         }
     }
 
-    private static int resetPlayerViewDistance(
-            CommandContext<CommandSourceStack> ctx,
-            ServerPlayer player
-    ) {
-        var loader = ohhappleinit.getLoader();
-        if (loader == null) {
-            ctx.getSource().sendFailure(Component.literal("玩家区块加载器未初始化"));
-            return 0;
-        }
-
-        loader.resetPlayerViewDistance(player);
-        ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("已重置玩家 %s 的区块加载设置",
-                        player.getName().getString())
-        ), true);
-
-        return 1;
-    }
-
-    private static int resetCurrentPlayerViewDistance(CommandContext<CommandSourceStack> ctx) {
-        if (ctx.getSource().getPlayer() != null) {
-            return resetPlayerViewDistance(ctx, ctx.getSource().getPlayer());
-        } else {
-            ctx.getSource().sendFailure(Component.literal("只有玩家可以执行此命令"));
-            return 0;
-        }
-    }
+//    private static int resetPlayerViewDistance(
+//            CommandContext<CommandSourceStack> ctx,
+//            ServerPlayer player
+//    ) {
+//        var loader = ohhappleinit.getLoader();
+//        if (loader == null) {
+//            ctx.getSource().sendFailure(Component.literal("玩家视距加载器未初始化"));
+//            return 0;
+//        }
+//
+//        loader.resetPlayerViewDistance(player);
+//        ctx.getSource().sendSuccess(() -> Component.literal(
+//                String.format("已重置玩家 %s 的视距设置",
+//                        player.getName().getString())
+//        ), true);
+//
+//        return 1;
+//    }
+//
+//    private static int resetCurrentPlayerViewDistance(CommandContext<CommandSourceStack> ctx) {
+//        if (ctx.getSource().getPlayer() != null) {
+//            return resetPlayerViewDistance(ctx, ctx.getSource().getPlayer());
+//        } else {
+//            ctx.getSource().sendFailure(Component.literal("只有玩家可以执行此命令"));
+//            return 0;
+//        }
+//    }
 
     private static int resetMultiplePlayersViewDistance(
             CommandContext<CommandSourceStack> ctx,
@@ -198,7 +198,7 @@ public class PlayerChunkCommand {
     ) {
         var loader = ohhappleinit.getLoader();
         if (loader == null) {
-            ctx.getSource().sendFailure(Component.literal("玩家区块加载器未初始化"));
+            ctx.getSource().sendFailure(Component.literal("玩家视距加载器未初始化"));
             return 0;
         }
 
@@ -207,7 +207,7 @@ public class PlayerChunkCommand {
         }
 
         ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("已重置 %d 个玩家的区块加载设置", players.size())
+                String.format("已重置 %d 个玩家的视距设置", players.size())
         ), true);
 
         return players.size();
@@ -216,11 +216,11 @@ public class PlayerChunkCommand {
     private static int listAllPlayerSettings(CommandContext<CommandSourceStack> ctx) {
         var loader = ohhappleinit.getLoader();
         if (loader == null) {
-            ctx.getSource().sendFailure(Component.literal("玩家区块加载器未初始化"));
+            ctx.getSource().sendFailure(Component.literal("玩家视距加载器未初始化"));
             return 0;
         }
 
-        ctx.getSource().sendSuccess(() -> Component.literal("=== 玩家区块加载设置 ==="), false);
+        ctx.getSource().sendSuccess(() -> Component.literal("=== 玩家视距加载设置 ==="), false);
 
         var settings = loader.getAllPlayerSettings();
         if (settings.isEmpty()) {
@@ -235,7 +235,7 @@ public class PlayerChunkCommand {
 
         int defaultDistance = CarpetPlusSettings.defaultPlayerViewDistance;
         ctx.getSource().sendSuccess(() -> Component.literal(
-                String.format("默认区块加载范围: %d", defaultDistance)
+                String.format("默认视距范围: %d", defaultDistance)
         ), false);
 
         return 1;
@@ -245,7 +245,7 @@ public class PlayerChunkCommand {
         boolean enabled = CarpetPlusSettings.playerSpecificChunks;
         String ruleValue = CarpetPlusSettings.playerChunkLoadRanges;
 
-        ctx.getSource().sendSuccess(() -> Component.literal("=== 玩家区块加载状态 ==="), false);
+        ctx.getSource().sendSuccess(() -> Component.literal("=== 玩家视距状态 ==="), false);
         ctx.getSource().sendSuccess(() -> Component.literal(
                 String.format("功能启用: %s", enabled ? "是" : "否")
         ), false);
@@ -280,17 +280,17 @@ public class PlayerChunkCommand {
 
     private static int showHelp(CommandContext<CommandSourceStack> ctx) {
         ctx.getSource().sendSuccess(() -> Component.literal("=== 玩家区块加载命令帮助 ==="), false);
-        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk set <玩家> <距离> - 设置玩家区块加载范围"), false);
-        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk get [玩家] - 查看玩家区块加载范围"), false);
-        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk reset [玩家] - 重置玩家区块加载设置"), false);
+        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk set <玩家> <距离> - 设置玩家视距范围"), false);
+        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk get [玩家] - 查看玩家视距范围"), false);
+//        ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk reset [玩家] - 重置玩家视距设置"), false);
         ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk list - 列出所有玩家设置"), false);
         ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk status - 查看状态信息"), false);
         ctx.getSource().sendSuccess(() -> Component.literal("/playerchunk help - 显示此帮助"), false);
         ctx.getSource().sendSuccess(() -> Component.literal(""), false);
         ctx.getSource().sendSuccess(() -> Component.literal("Carpet 规则:"), false);
         ctx.getSource().sendSuccess(() -> Component.literal("  /carpet playerSpecificChunks true/false - 启用/禁用功能"), false);
-        ctx.getSource().sendSuccess(() -> Component.literal("  /carpet playerChunkLoadRanges \"玩家1:10,玩家2:8\" - 批量设置"), false);
-        ctx.getSource().sendSuccess(() -> Component.literal("  /carpet defaultPlayerViewDistance <距离> - 设置默认范围"), false);
+//        ctx.getSource().sendSuccess(() -> Component.literal("  /carpet playerChunkLoadRanges \"玩家1:10,玩家2:8\" - 批量设置"), false);
+//        ctx.getSource().sendSuccess(() -> Component.literal("  /carpet defaultPlayerViewDistance <距离> - 设置默认范围"), false);
 
         return 1;
     }

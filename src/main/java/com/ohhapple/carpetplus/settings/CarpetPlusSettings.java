@@ -4,6 +4,7 @@ import carpet.api.settings.Rule;
 import carpet.api.settings.CarpetRule;
 import carpet.api.settings.Validator;
 import carpet.api.settings.Validators;
+import com.ohhapple.carpetplus.observes.recipe.RecipeRuleObserver;
 import net.minecraft.commands.CommandSourceStack;
 
 import static carpet.api.settings.RuleCategory.*;
@@ -102,21 +103,26 @@ public class CarpetPlusSettings
 //    )
 //    public static boolean TNTBreakFluid = false;
     //--------------------------------------------------------------------------------------
-    //启用玩家独立区块加载范围
+    //启用玩家独立视距范围
     @Rule(
             categories = {OHHAPPLE, FEATURE}
     )
     public static boolean playerSpecificChunks = false;
-    //玩家区块加载范围设置
-    @Rule(
-            categories = {OHHAPPLE, FEATURE}
-    )
+    //玩家视距范围设置
+//    @Rule(
+//            categories = {OHHAPPLE, FEATURE}
+//    )
     public static String playerChunkLoadRanges = "";
-    //默认玩家区块加载范围
-    @Rule(
-            categories = {OHHAPPLE, FEATURE},
-            validators = ViewDistanceValidator.class
-    )
+    //默认玩家视距范围
+//    @Rule(
+//            categories = {OHHAPPLE, FEATURE},
+//            validators = ViewDistanceValidator.class
+//    )
     public static int defaultPlayerViewDistance = 10;
+    //--------------------------------------------------------------------------------------
+    //混凝土粉末烧玻璃
+    @RecipeRule
+    @Rule(categories = {OHHAPPLE, FEATURE},validators = RecipeRuleObserver.class)
+    public static boolean concreteBurnedIntoglass = false;
 
 }
