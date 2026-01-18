@@ -1,4 +1,5 @@
-'''/carpet SuperWindCharge [boolean default=false] 风弹螺旋丸手里剑
+~~~
+/carpet SuperWindCharge [boolean default=false] 风弹螺旋丸手里剑
 
 /carpetVillageAlwaysBreed [boolean default=false] 村民一直繁殖（包括小村民）
 
@@ -40,4 +41,4 @@
 
 统计信息
 /chunkstats
-'''
+~~~
