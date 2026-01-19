@@ -5,8 +5,8 @@
 ~~~
 /carpet SuperWindCharge [boolean default=false] 风弹螺旋丸手里剑
 /carpetVillageAlwaysBreed [boolean default=false] 村民一直繁殖（包括小村民）
-/carpet SuperSponge [boolean default=false] 超级海绵
-/carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需开启超级海绵)
+/carpet SuperSponge [String default="false"] 超级海绵模式(可使用/carpet SuperSpongeRadius设置半径)
+/carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需要使用/carpet SuperSponge开启超级海绵模式)
 /carpet playerSpecificChunks [boolean default=false] 启用玩家独立视距
 /carpet concreteBurnedIntoglass [boolean default=false] 16色混凝土粉末烧成16色玻璃
 关于玩家独立视距范围的指令：

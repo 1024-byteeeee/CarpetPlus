@@ -11,10 +11,10 @@
   "carpet.rule.NuclearTNT.desc": "核弹",
   "carpet.rule.TNTPower.name": "核弹爆炸强度(需开启核弹)",
   "carpet.rule.TNTPower.desc": "核弹爆炸强度(设置太大当心崩溃)",
-  "carpet.rule.SuperSponge.name": "超级海绵",
-  "carpet.rule.SuperSponge.desc": "超级海绵开关(需设置半径)",
+  "carpet.rule.SuperSponge.name": "超级海绵模式",
+  "carpet.rule.SuperSponge.desc": "超级海绵模式(可使用/carpet SuperSpongeRadius设置半径)",
   "carpet.rule.SuperSpongeRadius.name": "超级海绵生效半径(需开启超级海绵)",
-  "carpet.rule.SuperSpongeRadius.desc": "超级海绵生效半径",
+  "carpet.rule.SuperSpongeRadius.desc": "超级海绵生效半径(需要使用/carpet SuperSponge开启超级海绵模式)",
   "carpet.rule.TNTBreakFluid.name": "TNT可破坏流体",
   "carpet.rule.TNTBreakFluid.desc": "TNT可破坏流体",
 

@@ -11,10 +11,10 @@
   "carpet.rule.NuclearTNT.desc": "nuclear bomb",
   "carpet.rule.TNTPower.name": "Nuclear bomb explosion intensity (nuclear bomb required)",
   "carpet.rule.TNTPower.desc": "nuclear bomb explosion intensity (set too big to be careful of collapse)",
-  "carpet.rule.SuperSponge.name": "super sponge",
-  "carpet.rule.SuperSponge.desc": "SuperSponge Switch (radius required)",
+"carpet.rule.SuperSponge.name": "Super Sponge Mode",
+  "carpet.rule.SuperSponge.desc": "SuperSponge Mode (radius can be set using /carpet SuperSpongeRadius)",
   "carpet.rule.SuperSpongeRadius.name": "Super Sponge Effective Radius (Super Sponge Required)",
-  "carpet.rule.SuperSpongeRadius.desc": "super sponge radius",
+  "carpet.rule.SuperSpongeRadius.desc": "SuperSponge Radius (requires /carpet SuperSponge to enable SuperSponge mode)",
   "carpet.rule.TNTBreakFluid.name": "TNT destructible fluid",
   "carpet.rule.TNTBreakFluid.desc": "TNT destructible fluid",
 

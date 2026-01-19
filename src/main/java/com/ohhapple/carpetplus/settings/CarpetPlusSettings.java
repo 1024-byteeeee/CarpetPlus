@@ -87,9 +87,10 @@ public class CarpetPlusSettings
 //    public static int TNTPower = 4;
     //--------------------------------------------------------------------------------------
     @Rule(
+            options = {"false","water", "lava", "both"},
             categories = {OHHAPPLE, FEATURE}
     )
-    public static boolean SuperSponge = false;
+    public static String SuperSponge = "false";
     @Rule(
             options = {"0","6", "10", "20","100"},
             strict = false,
@@ -124,5 +125,6 @@ public class CarpetPlusSettings
     @RecipeRule
     @Rule(categories = {OHHAPPLE, FEATURE},validators = RecipeRuleObserver.class)
     public static boolean concreteBurnedIntoglass = false;
+    //---------------------------------------------------------------------------------------
 
 }

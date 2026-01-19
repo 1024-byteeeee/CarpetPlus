@@ -1,6 +1,5 @@
 package com.ohhapple.carpetplus.utils;
 
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.registries.BuiltInRegistries;
