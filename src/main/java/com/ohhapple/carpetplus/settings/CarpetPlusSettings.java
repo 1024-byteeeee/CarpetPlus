@@ -44,6 +44,17 @@ public class CarpetPlusSettings
         @Override
         public String description() { return "You must choose a value from 0 to 100";}
     }
+    public static class Validate1_1000 extends Validator<Integer>
+    {
+        @Override
+        public Integer validate(CommandSourceStack source, CarpetRule<Integer> currentRule, Integer newValue, String string)
+        {
+            return newValue >= 1 && newValue <= 1000 ? newValue : null;
+        }
+
+        @Override
+        public String description() { return "You must choose a value from 0 to 100";}
+    }
 
     // 验证器类
     public static class ViewDistanceValidator extends Validator<Integer> {
@@ -126,5 +137,34 @@ public class CarpetPlusSettings
     @Rule(categories = {OHHAPPLE, FEATURE},validators = RecipeRuleObserver.class)
     public static boolean concreteBurnedIntoglass = false;
     //---------------------------------------------------------------------------------------
+    //药水可堆叠
+    @Rule(
+            options = {"1","16", "64"},
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static int StackablePotion = 1;
+    //附魔书可堆叠
+    @Rule(
+            options = {"1","16", "64"},
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static int StackableEnchantedBook = 1;
+    //不死图腾可堆叠totem_of_undying
+    @Rule(
+            options = {"1","16", "64"},
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static int StackableTotemOfUndying = 1;
+    //装备不可破坏
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean EquipmentUnbreak = false;
+    //--------------------------------------------------------------------------------------
+    //潜影盒嵌套
+    @Rule(
+            categories = {OHHAPPLE, FEATURE}
+    )
+    public static boolean ShulkerBoxNested = false;
 
 }

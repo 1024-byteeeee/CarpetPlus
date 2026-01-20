@@ -2,6 +2,7 @@ package com.ohhapple.carpetplus.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.ohhapple.carpetplus.mixin.ohhapple.ChunkMapInvoker;
 import com.ohhapple.carpetplus.settings.CarpetPlusSettings;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -235,7 +236,8 @@ public class PlayerChunkLoader {
 
         // 获取ChunkMap并更新玩家区块追踪
         ServerLevel level = (ServerLevel) player.level();
-        level.getChunkSource().chunkMap.updateChunkTracking(player);
+        //level.getChunkSource().chunkMap.updateChunkTracking(player);  加宽器模式
+        ((ChunkMapInvoker)level.getChunkSource().chunkMap).invokeUpdateChunkTracking( player);
 
         LOGGER.debug("更新玩家 {} 区块追踪", player.getName().getString());
     }

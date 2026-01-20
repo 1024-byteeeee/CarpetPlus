@@ -26,5 +26,15 @@
   "carpet.rule.defaultPlayerViewDistance.desc": "开启玩家独立视距范围后的默认范围",
 
   "carpet.rule.concreteBurnedIntoglass.name": "混凝土粉末烧玻璃",
-  "carpet.rule.concreteBurnedIntoglass.desc": "混凝土粉末烧玻璃"
+  "carpet.rule.concreteBurnedIntoglass.desc": "混凝土粉末烧玻璃",
+  "carpet.rule.StackablePotion.name": "药水可堆叠",
+  "carpet.rule.StackablePotion.desc": "药水可堆叠",
+  "carpet.rule.StackableEnchantedBook.name": "附魔书可堆叠",
+  "carpet.rule.StackableEnchantedBook.desc": "附魔书可堆叠",
+  "carpet.rule.StackableTotemOfUndying.name": "不死图腾可堆叠",
+  "carpet.rule.StackableTotemOfUndying.desc": "不死图腾可堆叠",
+  "carpet.rule.EquipmentUnbreak.name": "装备不消耗耐久",
+  "carpet.rule.EquipmentUnbreak.desc": "装备不消耗耐久",
+  "carpet.rule.ShulkerBoxNested.name": "潜影盒嵌套",
+  "carpet.rule.ShulkerBoxNested.desc": "允许潜影盒放在潜影盒里"
 }

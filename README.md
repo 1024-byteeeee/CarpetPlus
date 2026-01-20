@@ -9,6 +9,11 @@
 /carpet SuperSpongeRadius [int default=6] 超级海绵生效半径(需要使用/carpet SuperSponge开启超级海绵模式)
 /carpet playerSpecificChunks [boolean default=false] 启用玩家独立视距
 /carpet concreteBurnedIntoglass [boolean default=false] 16色混凝土粉末烧成16色玻璃
+/carpet StackablePotion [int default=1] 药水可堆叠
+/carpet StackableEnchantedBook [int default=1] 附魔书可堆叠
+/carpet StackableTotemOfUndying [int default=1] 不死图腾可堆叠
+/carpet EquipmentUnbreak [boolean default=false] 装备不消耗耐久
+/carpet ShulkerBoxNested [boolean default=false] 潜影盒嵌套
 关于玩家独立视距范围的指令：
     启用功能
     /carpet playerSpecificChunks true

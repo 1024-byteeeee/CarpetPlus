@@ -19,13 +19,23 @@
   "carpet.rule.TNTBreakFluid.desc": "TNT destructible fluid",
 
 
-  "carpet.rule.playerSpecificChunks.name": "启用玩家独立视距范围",
-  "carpet.rule.playerSpecificChunks.desc": "启用玩家独立视距范围",
-  "carpet.rule.playerChunkLoadRanges.name": "玩家视距范围设置",
-  "carpet.rule.playerChunkLoadRanges.desc": "请使用/playerchunk逐个设置",
-  "carpet.rule.defaultPlayerViewDistance.name": "默认玩家视距范围",
-  "carpet.rule.defaultPlayerViewDistance.desc": "开启玩家独立视距范围后的默认范围",
+  "carpet.rule.playerSpecificChunks.name": "Enables independent line-of-sight range for players",
+  "carpet.rule.playerSpecificChunks.desc": "Enables independent line-of-sight range for players",
+  "carpet.rule.playerChunkLoadRanges.name": "playerViewingRangeSetting",
+  "carpet.rule.playerChunkLoadRanges.desc": "pleaseUse /Playerchunk ToSetItUpOneByOne",
+  "carpet.rule.defaultPlayerViewDistance.name": "defaultPlayerLineOfSightRange",
+  "carpet.rule.defaultPlayerViewDistance.desc": "Turn on the default range after the player's independent line-of-sight range",
 
-  "carpet.rule.concreteBurnedIntoglass.name": "混凝土粉末烧玻璃",
-  "carpet.rule.concreteBurnedIntoglass.desc": "混凝土粉末烧玻璃"
+  "carpet.rule.concreteBurnedIntoglass.name": "concretePowderBurnsGlass",
+  "carpet.rule.concreteBurnedIntoglass.desc": "concretePowderBurnsGlass",
+  "carpet.rule.StackablePotion.name": "thePotionsAreStackable",
+  "carpet.rule.StackablePotion.desc": "thePotionsAreStackable",
+  "carpet.rule.StackableEnchantedBook.name": "enchantedBooksAreStackable",
+  "carpet.rule.StackableEnchantedBook.desc": "enchantedBooksAreStackable",
+  "carpet.rule.StackableTotemOfUndying.name": "theTotemOfImmortalityCanBeStacked",
+  "carpet.rule.StackableTotemOfUndying.desc": "theTotemOfImmortalityCanBeStacked",
+  "carpet.rule.EquipmentUnbreak.name": "equipmentDoesNotConsumeDurability",
+  "carpet.rule.EquipmentUnbreak.desc": "equipmentDoesNotConsumeDurability",
+  "carpet.rule.ShulkerBoxNested.name": "shulkerBoxNesting",
+  "carpet.rule.ShulkerBoxNested.desc": "Allow the Shulker Box to be placed in the Shulker Box"
 }

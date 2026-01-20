@@ -53,9 +53,9 @@ public class PlusRecipeManager {
         smeltingRecipes.forEach(recipe -> recipe.addToRecipeMap(recipeMap));
     }
 
-    public static void clearRecipeListMemory(PlusRecipeBuilder amsRecipeBuilder) {
-        amsRecipeBuilder.getShapedRecipeList().clear();
-        amsRecipeBuilder.getShapelessRecipeList().clear();
-        amsRecipeBuilder.getSmeltingRecipeList().clear();
+    public static void clearRecipeListMemory(PlusRecipeBuilder PlusRecipeBuilder) {
+        PlusRecipeBuilder.getShapedRecipeList().clear();
+        PlusRecipeBuilder.getShapelessRecipeList().clear();
+        PlusRecipeBuilder.getSmeltingRecipeList().clear();
     }
 }

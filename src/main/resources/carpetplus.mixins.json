@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ChunkMapMixin",
+    "ItemStackMixin",
     "SpongeBlockmixin",
     "Villagermixin",
     "WindChargemixin",
@@ -12,6 +13,8 @@
     "hooks.recipe.RecipeManagerAccessor",
     "hooks.recipe.RecipeManagerMixin",
     "hooks.server.MinecraftServerMixin",
+    "ShulkerBoxNested.BlockItemMixin",
+    "ShulkerBoxNested.ShulkerBoxBlockEntityMixin",
     "ohhapple.ChunkMapInvoker"
   ],
   "injectors": {

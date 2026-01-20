@@ -25,7 +25,7 @@ public class RecipeRuleHelper {
         if (MinecraftServerUtil.serverIsRunning(server) && hasActiveRecipeRule()) {
             Collection<RecipeHolder<?>> allRecipes = getServerRecipeManager(server).getRecipes();
             for (RecipeHolder<?> recipe : allRecipes) {
-                //identifier()在26.1后为location()
+                //location()在26.1后为identifier()
                 if (recipe.id().location().getNamespace().equals(MOD_ID) && !player.getRecipeBook().contains(recipe.id())) {
                     player.awardRecipes(List.of(recipe));
                 }
@@ -41,7 +41,7 @@ public class RecipeRuleHelper {
                 reloadServerResources(server);
                 Collection<RecipeHolder<?>> allRecipes = getServerRecipeManager(server).getRecipes();
                 for (RecipeHolder<?> recipe : allRecipes) {
-                    //identifier()在26.1后为location()
+                    //location()在26.1后为identifier()
                     if (recipe.id().location().getNamespace().equals(MOD_ID)) {
                         for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                             if (!player.getRecipeBook().contains(recipe.id())) {
