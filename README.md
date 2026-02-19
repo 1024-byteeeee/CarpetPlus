@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/github/license/ohhapple/CarpetPlus.svg?label=License&color=blue)](https://choosealicense.com/licenses/lgpl-3.0/)
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/ohhapple/CarpetPlus/total?color=161616&label=Github%20downloads)](https://github.com/ohhapple/CarpetPlus/releases)
 
-# 文档主页：https://ohhapple.github.io/
+# 文档主页：https://ohhapple.github.io
 # 相关规则指令
 ~~~
 /carpet SuperWindCharge [boolean default=false] 风弹螺旋丸手里剑
